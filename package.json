@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/chezkevin/nyt-react-hw/issues"
   },
-  "homepage": "https://github.com/chezkevin/nyt-react-hw#readme"
+  "homepage": "https://github.com/chezkevin/nyt-react-hw#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.5",
+    "morgan": "^1.8.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
 }
