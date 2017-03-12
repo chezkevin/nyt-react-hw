@@ -4,9 +4,6 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 
-// Require our userModel model
-var ArticleModel = require("./articleModel.js");
-
 // Initialize Express
 var app = express();
 
@@ -33,12 +30,10 @@ db.once("open", function() {
   console.log("Mongoose connection successful.");
 });
 
-// Routes
-app.get("/", function(req, res) {
-  res.send(index.html);
-});
-
 // Listen on port 3000
 app.listen(3000, function() {
   console.log("App running on port 3000!");
 });
+
+// require routes
+require('./controllers/controller.js')(app);
