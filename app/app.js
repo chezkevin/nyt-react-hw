@@ -1,6 +1,6 @@
 var React = require("react");
 var ReactDOM = require("react-dom");
-var Main = require('./components/main');
+var Main = require('./components/Main');
 
 var headline;
 
@@ -32,31 +32,6 @@ $('#search').on('click', function() {
 	}).fail(function(err) {
 	  throw err;
 	});
-});
-
-// This code renders a simple HTML Div.
-// Note that ReactDOM.render cannot render a block of HTML elements
-// without them all fitting within a single parent div or container.
-
-var ArticleTitle = React.createClass({
-  render: function () {
-    return (<h1>{ headline }</h1>);
-  }
-});
-
-
-var Article = React.createClass({
-  render: function() {
-    return (
-      <div>
-        <ArticleTitle />
-        <hr />
-        <div>
-        </div>
-
-      </div>
-    );
-  }
 });
 
 ReactDOM.render(<Main />,document.getElementById("app"));
